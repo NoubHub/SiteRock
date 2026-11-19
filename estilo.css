@@ -1,0 +1,73 @@
+.video-fundo-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -2; /* Joga o vídeo para trás de tudo */
+}
+
+.video-fundo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.overlay-escuro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65); /* Película escura para legibilidade */
+  z-index: -1;
+}
+
+body {
+ background-color: black;
+ color: #FFFFFF;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ font-size: 20px;
+ line-height: 1.6;
+ 
+}
+
+h1, h2, h3 {
+  color: chartreuse;/* CRIE UMA PROPRIEDADE PARA A COR DOS TÍTULOS */
+margin-bottom: 15px;
+}
+
+
+.cartao {
+  background-color: #555050;      /* MUDE A COR DO CARTÃO */
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.area-imagem {
+  text-align: center;
+}
+
+.foto-destaque {
+  width: 250px;
+  display: block;
+  width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+  border-radius: var(--raio);
+  background: var(--primaria-clara);
+}
+.site-container {
+  max-width: 800px;     /* Largura máxima do site */
+  margin: 0 auto;       /* O 'auto' nas laterais centraliza a caixa na tela */
+  padding: 20px;        /* Espaçamento interno para o conteúdo não colar nas bordas */
+  position: relative;   /* Garante que fique acima do vídeo de fundo */
+  z-index: 2;           /* Mantém o texto visível acima do overlay escuro */
+}
